@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+     // değişkenleri oluşturuyoruz
+        int mat, fiz, kim, tur, tar, muz;
+
+        //Scanner sınıfımızı tanımladık
+        Scanner inp= new Scanner(System.in);
+
+        //Kullanıcıdan değerleri alıyoruz
+        System.out.print("Matematik notunuzu girin : ");
+        mat= inp.nextInt();
+
+        System.out.print("Fizik notunuzu girin : ");
+        fiz= inp.nextInt();
+
+        System.out.print("Kimya notunuzu girin : ");
+        kim= inp.nextInt();
+
+        System.out.print("Türkçe notunuzu girin : ");
+        tur= inp.nextInt();
+
+        System.out.print("Tarih notunuzu girin : ");
+        tar= inp.nextInt();
+
+        System.out.print("Müzik notunuzu girin : ");
+        muz= inp.nextInt();
+
+        //ortalamayı hesaplıyoruz
+       int toplam =(mat+fiz+kim+tur+tar+muz);
+       double not= toplam/6;
+System.out.println("Ortalamanız : " +not);
+
+       boolean durum = not>=60;
+        String sonuc = durum ? "Sınıfı Geçtiniz." : "Sınıfta Kaldınız.";
+        System.out.print(sonuc);
+
+
+    }
+}
