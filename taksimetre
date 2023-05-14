@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Taksimetre {
+    public static void main(String[] args) {
+
+        //değişkenleri tanımlıyoruz
+        double tutar, minTutar, acilisUcreti, gidilenYol;
+
+        //kullanıcıdan verileri topluyoruz
+        System.out.print("Kaç KM Gidileceğini Giriniz : ");
+         Scanner km= new Scanner(System.in);
+        gidilenYol= km.nextDouble();
+
+        acilisUcreti=10;
+        tutar= (gidilenYol*2.20)+acilisUcreti;
+        minTutar=20;
+
+        boolean durum = tutar<20;
+        double sonuc= durum? tutar=minTutar : tutar;
+        System.out.println(sonuc);
+
+
+    }
+}
