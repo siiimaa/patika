@@ -1,0 +1,17 @@
+import java.util.Scanner;
+public class Vki {
+    public static void main(String[] args) {
+        //değişkenleri giriyoruz
+        double boy, kilo, vucudKitleIndeksi;
+
+        Scanner vki= new Scanner(System.in);
+        System.out.print("Lütfen Boyunuzu (metre cinsinden) giriniz : ");
+        boy = vki.nextDouble();
+
+        System.out.print("Lütfen kilonuzu giriniz : ");
+        kilo= vki.nextDouble();
+
+        vucudKitleIndeksi= kilo/(boy*boy);
+        System.out.print("Vücut Kitle İndeksi : " +vucudKitleIndeksi);
+    }
+}
