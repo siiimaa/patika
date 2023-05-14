@@ -3,18 +3,21 @@ public class Dairebes {
     public static void main(String[] args) {
 
         //değişkenleri tanımlıyoruz
-        double alan, cevre, r, pi=3.14;
+        double alan, cevre, r, pi=3.14, daireDilimi, a;
 
         //dışarıdan yarıçap alıyoruz
         Scanner daire=new Scanner(System.in);
         System.out.print("Bir yarıçap girin : ");
         r= daire.nextDouble();
-
+        System.out.print("Merkez açısının ölçüsünü girin : ");
+        a= daire.nextDouble();
+        
         alan= pi*r*r;
         cevre= 2*pi*r;
-
+        daireDilimi= (pi*(r*r)*a)/360;
+        
         System.out.println("Alan : "+alan);
         System.out.println("Cevre : "+cevre);
-
+        System.out.println("Daire diliminin alanı : "+daireDilimi);
     }
 }
