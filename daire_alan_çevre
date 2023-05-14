@@ -1,0 +1,20 @@
+import java.util.Scanner;
+public class Dairebes {
+    public static void main(String[] args) {
+
+        //değişkenleri tanımlıyoruz
+        double alan, cevre, r, pi=3.14;
+
+        //dışarıdan yarıçap alıyoruz
+        Scanner daire=new Scanner(System.in);
+        System.out.print("Bir yarıçap girin : ");
+        r= daire.nextDouble();
+
+        alan= pi*r*r;
+        cevre= 2*pi*r;
+
+        System.out.println("Alan : "+alan);
+        System.out.println("Cevre : "+cevre);
+
+    }
+}
