@@ -1,0 +1,43 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        int a, b, select;
+
+        Scanner input = new Scanner(System.in);
+        System.out.println("İlk sayıyı giriniz : ");
+        a = input.nextInt();
+        System.out.println("İkinci sayıyı girin : ");
+        b = input.nextInt();
+
+        System.out.println("1-Toplama\n2-Çıkarma\n3-Çarpma\n4-Bölme");
+        System.out.println("Seçiniz : ");
+        select = input.nextInt();
+
+        switch (select) {
+            case 1:
+                System.out.println("Toplama sonucu : " + (a + b));
+                break;
+            case 2:
+                System.out.println("Çıkarma sonucu : " + (a - b));
+                break;
+            case 3:
+                System.out.println("Çarpma sonucu : " + (a * b));
+                break;
+            case 4:
+                switch (b) {
+                    case 0:
+                        System.out.println("0'a bölme işlemi gerçekleştirilemez.");
+                    break;
+                    default:
+                        System.out.println("Bölme sonucu : " + (a / b));
+                    break;
+                }
+                break;
+            default:
+                System.out.println("Yanlış seçim yaptınız.");
+            break;
+        }
+
+
+    }
+}
