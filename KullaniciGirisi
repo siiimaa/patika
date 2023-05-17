@@ -1,0 +1,46 @@
+import java.util.Scanner;
+public class KullaniciGirisi {
+    public static void main(String[] args) {
+        String userName, password, select, newPassword;
+
+        Scanner inp = new Scanner(System.in);
+
+        //şifre ve kullanıcı adını alıyoruz
+        System.out.print("Kullanıcı Adınız : ");
+        userName = inp.nextLine();
+
+        System.out.print("Şifreniz : ");
+        password = inp.nextLine();
+
+        //parola ve şifre doğru ise
+        if(userName.equals("patika") && password.equals("java")) {
+            System.out.println("Giriş Yaptınız.");
+
+        //parola veya şifre yanlış ise
+        }else if ((password.equals("java")) || !(userName.equals("patika"))) {
+            System.out.println("Kullanıcı adı veya şifre hatalı!\nLütfen tekrar deneyiniz.");
+
+
+            //sadece parola yanlış ise
+        }else if  (password != "java") {
+            System.out.println("Şifreniz yanlış! Lütfen bilgilerinizi tekrar kontrol edin.");
+            System.out.println("Şifrenizi unuttuysanız ve yeni şifre oluşturmak istiyorsanız 'Y' tuşuna basın. \nAna sayfaya dönmek istiyorsanız 'A' tuşuna basın");
+            System.out.println();
+            select = inp.nextLine();
+                if (select.equals("A")){
+                    System.out.println("Ana sayfaya yönlendiriliyorsnuz.");
+                }else if(select.equals ("Y")){
+                    System.out.println("Yeni şifre giriniz : ");
+                    newPassword = inp.nextLine();
+                    if (newPassword.equals(password) || newPassword.equals("java")){
+                        System.out.println("Yeni şifre oluşturulamadı! \nLütfen tekrar deneyiniz");
+                    }else{
+                        System.out.println("Şifreniz başarıyla oluşturulmuştur.");
+                    }
+                }else {
+                    System.out.println("Hatalı giriş yaptınız! \nLütfen sadece 'Y' ve 'A' tuşlarını kullanınız.");
+                }
+
+        }
+    }
+}
