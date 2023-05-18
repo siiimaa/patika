@@ -1,0 +1,73 @@
+import java.util.Scanner;
+public class SinifGecme {
+    public static void main(String[] args) {
+        //değişkenleri ekliyoruz
+        double mat, fizik, tur, kimya, muzik, average;
+
+        /*0 dan 100 e kadar olan notları toplayan 'validNotes' değişkenini ekliyoruz
+        notu 0 dan 100 e kadar olan ders sayısını tutan 'valid'*/
+        double validNotes = 0,
+               valid = 0;
+
+        //kullanıcıdan verileri topluyoruz
+            Scanner inp = new Scanner(System.in);
+
+            System.out.println("Matematik notunuzu giriniz : ");
+            mat = inp.nextDouble();
+            if (mat >= 0 && mat <= 100){
+                validNotes += mat;
+                valid++;
+            }else{
+                System.out.println("Yanlış matematik notu girdiniz.");
+            }
+
+            System.out.println("Fizik notunuzu giriniz : ");
+            fizik = inp.nextDouble();
+            if (fizik >= 0 && fizik <= 100){
+                validNotes += fizik;
+                valid++;
+            }else{
+                System.out.println("Yanlış fizik notu girdiniz.");
+            }
+
+            System.out.println("Türkçe notunuzu giriniz : ");
+            tur = inp.nextDouble();
+            if (tur >= 0 && tur <= 100){
+                validNotes += tur;
+                valid++;
+            }else{
+                System.out.println("Yanlış türkçe notu girdiniz.");
+            }
+
+            System.out.println("Kimya notunuzu giriniz : ");
+            kimya = inp.nextDouble();
+            if (kimya >= 0 && kimya <= 100){
+                validNotes += kimya;
+                valid++;
+            }else{
+                System.out.println("Yanlış kimya notu girdiniz.");
+            }
+
+            System.out.println("Müzik notunuzu giriniz : ");
+            muzik = inp.nextDouble();
+            if (muzik >= 0 && muzik <= 100){
+                validNotes += muzik;
+                valid++;
+            }else{
+                System.out.println("Yanlış müzik notu girdiniz.");
+            }
+
+        //ortalamayı hesaplıyoruz
+            average = validNotes / valid;
+        System.out.println("Ortalamanız : " +average);
+
+        //dersi geçip geçmeme durumunu belirliyoruz
+
+            if (average <= 55){
+                System.out.println("Ortalamanız çok düşük. Sınıfta kaldınız.");
+            }else{
+                System.out.println("Tebrikler! Sınıfı geçtiniz");
+            }
+
+    }
+}
