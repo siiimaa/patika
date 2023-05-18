@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        //
+        int weather;
+
+        //kullanıcıdan hava durumu bilgilerini alıyoruz
+        System.out.print("Hava sıcaklığını giriniz : ");
+        Scanner inp = new Scanner(System.in);
+        weather = inp.nextInt();
+
+        //koşul ekliyoruz
+        if (5 >= weather){
+            System.out.println("Hava durumu : " + weather + " derece.\nKayak yapabilirsiniz.");
+        }else if ((5 <= weather) && (weather <= 15)){
+            System.out.println("Hava durumu : " + weather + " derece.\nSinemaya gidebilirsiniz");
+        }else if ((15 <= weather) && (weather <=25)){
+            System.out.println("Hava durumu : " + weather + " derece.\nPiknik yapabilirsiniz.");
+        }else if (weather >= 25) {
+            System.out.println("Hava durumu : " + weather + " derece.\nYüzmeye gidebilirsiniz.");
+        }
+
+    }
+}
