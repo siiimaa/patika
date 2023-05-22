@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class UcakBilet {
     public static void main(String[] args) {
         double distance, age, typeOfFlight, normalPrice;
-        double price1 =0, price2= 0, totalPrice = 0, ageDiscount = 0, typeDiscount;
+        double price1 =0, price2= 0, ageDiscount = 0, typeDiscount;
 
         //kullanıcıdan verileri topluyoruz
         Scanner inp = new Scanner(System.in);
